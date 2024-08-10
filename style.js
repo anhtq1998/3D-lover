@@ -104,3 +104,11 @@ document.onmousewheel = function(e) {
   radius += d;
   init(1);
 };
+document.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('myAudio');
+
+  // Thử phát âm thanh
+  audio.play().catch(error => {
+      console.error('Error playing audio:', error);
+  });
+});
